@@ -19,3 +19,4 @@ Correr en linux o mac: "/a.out"
 Correr en windows: "a.exe"
 
 # Correcciones
+Sin correcciones por el momento.

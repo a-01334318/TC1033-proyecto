@@ -13,7 +13,7 @@
 #include <iostream>
 #include <string>
 #include "paciente.h"
-#include "dietas.h"
+#include "dieta.h"
 #include "objetivo.h"
 
 /* usa este código para poner tus propios
@@ -33,11 +33,12 @@ int main(){
   paciente_1.set_peso(57.0);
   std::cout << paciente_1.imc() << std::endl;
 
-  Dieta dieta_1("Keto1", 1600, 30, 70);
+  Dieta dieta_1("Keto1", 1600, 30, 70, 20);
   std::cout << dieta_1.get_tipo() << " "
             << dieta_1.get_calorias() << " "\
             << dieta_1.get_proteinas() << " "\
-            << dieta_1.get_lipidos() << std::endl;
+            << dieta_1.get_lipidos() << " "\
+            << dieta_1.get_carbs() << std::endl;
 
   dieta_1.set_tipo("Keto2");
   dieta_1.set_calorias(1700);

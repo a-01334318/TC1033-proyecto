@@ -1,7 +1,7 @@
 /*
 * Erik Cabrera González
 * A01334318
-* Proyecto Nutricion
+* Proyecto Nutrición
 * Programar la clase Paciente que:
 * Atributos: nombre, peso, estatura, edad y sexo
 * Métodos: constructor, getters(), setters(), imc(tiempo)
@@ -47,6 +47,7 @@ public:
   float imc();
 
   void creaEjemploDieta();
+  void creaEjemploObjetivo();
 
 };
 
@@ -98,6 +99,10 @@ float Paciente::imc(){
 
 void Paciente::creaEjemploDieta(){
   dietas[0] = Dieta("Ayuno", 1800, 40, 10, 50);
+}
+
+void Paciente::creaEjemploObjetivo(){
+  objetivos[0] = Objetivo("Bajar", 3, 2);
 }
 
 // Herencia Hipertension

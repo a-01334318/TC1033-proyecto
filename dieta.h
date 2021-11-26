@@ -1,19 +1,22 @@
 /*
 * Erik Cabrera González
 * A01334318
-* Proyecto Nutricion
+* Proyecto Nutrición
 * Programar la clase Dieta que:
-* Atributos: tipo, calorías, proteínas, lipidos
-* Métodos: getters(), setters(), calxcomida()
-* Constructor
+* Atributos: tipo, calorías, proteínas, lipidos y carbs
+* Métodos: constructor, getters(), setters(), calxcomida()
 */
+#ifndef DIETA_H
+#define DIETA_H
 
-#include<string>
+#include <string>
+#include <iostream>
 
+using namespace std;
 
 class Dieta{
-private:
-  std::string tipo;
+protected:
+  string tipo;
   float calorias;
   float proteinas;
   float lipidos;
@@ -21,15 +24,15 @@ private:
 
 public:
   Dieta();
-  Dieta(std::string tip, float cal, float pro, float lip, float car): tipo(tip), calorias(cal), proteinas(pro), lipidos(lip), carbs(car){};
+  Dieta(string tip, float cal, float pro, float lip, float car): tipo(tip), calorias(cal), proteinas(pro), lipidos(lip), carbs(car){};
 
-  std::string get_tipo();
+  string get_tipo();
   float get_calorias();
   float get_proteinas();
   float get_lipidos();
   float get_carbs();
 
-  void set_tipo(std::string );
+  void set_tipo(string );
   void set_calorias(float );
   void set_proteinas(float );
   void set_lipidos(float );
@@ -40,11 +43,11 @@ public:
 };
 
 
-std::string Dieta::get_tipo(){
+string Dieta::get_tipo(){
   return tipo;
 }
 
-void Dieta::set_tipo(std::string tip){
+void Dieta::set_tipo(string tip){
   tipo = tip;
 }
 
@@ -85,3 +88,5 @@ float Dieta::calxcomida(int veces){
   comidas = calorias / veces;
   return comidas;
 }
+
+#endif

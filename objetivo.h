@@ -21,7 +21,7 @@ private:
   int tiempo;
 
 public:
-  Objetivo();
+  Objetivo(): tipo(""), cantidad(0), tiempo(0){};
   Objetivo(string tip, float can, int tie): tipo(tip), cantidad(can), tiempo(tie){};
 
   string get_tipo();

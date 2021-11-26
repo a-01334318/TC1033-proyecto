@@ -16,6 +16,7 @@
 #include "dieta.h"
 
 using namespace std;
+const int MAX = 100;
 
 class Paciente{
 protected:
@@ -24,9 +25,11 @@ protected:
   float peso;
   float estatura;
   int edad;
+  Dieta dietas[MAX];
+  Objetivo objetivos[MAX];
 
 public:
-  Paciente();
+  Paciente(): nombre(""), sexo(""), peso(0), estatura(0), edad(0){};
   Paciente(string nom, string se, float pe, float es, int ed): nombre(nom), sexo(se), peso(pe), estatura(es), edad(ed){};
 
   string get_nombre();
@@ -42,6 +45,8 @@ public:
   void set_edad(int );
 
   float imc();
+
+  void creaEjemploDieta();
 
 };
 
@@ -91,6 +96,10 @@ float Paciente::imc(){
   return imc;
 }
 
+void Paciente::creaEjemploDieta(){
+  dietas[0] = Dieta("Ayuno", 1800, 40, 10, 50);
+}
+
 // Herencia Hipertension
 class Hipertension: public Paciente{
 protected:
@@ -98,8 +107,8 @@ protected:
   float colesterol;
 
 public:
-  Hipertension();
-  Hipertension(string nom, string se, float pe, float es, int ed, bool tra, float col):Paciente(nom, se, pe, es, ed){
+  Hipertension(): Paciente(){};
+  Hipertension(string nom, string se, float pe, float es, int ed, bool tra, float col): Paciente(nom, se, pe, es, ed){
     tratamiento = tra;
     colesterol = col;
   }
@@ -136,8 +145,8 @@ protected:
   float hierro;
 
 public:
-  Colitis();
-  Colitis(string nom, string se, float pe, float es, int ed, bool tra, string sub, float fe):Paciente(nom, se, pe, es, ed){
+  Colitis(): Paciente(){};
+  Colitis(string nom, string se, float pe, float es, int ed, bool tra, string sub, float fe): Paciente(nom, se, pe, es, ed){
     tratamiento = tra;
     subtipo = sub;
     hierro = fe;

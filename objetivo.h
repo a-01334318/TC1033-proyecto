@@ -4,29 +4,32 @@
 * Proyecto Nutricion
 * Programar la clase Objetivo que:
 * Atributos: tipo, cantidad, tiempo
-* Métodos: getters(), setters(), kilosalmes()
-* Constructor
+* Métodos: constructor, getters(), setters(), kilosalmes()
 */
+#ifndef OBJETIVO_H
+#define OBJETIVO_H
 
-#include<string>
+#include <string>
+#include <iostream>
 
+using namespace std;
 
 class Objetivo{
 private:
-  std::string tipo;
+  string tipo;
   float cantidad;
   int tiempo;
 
 public:
   Objetivo();
-  Objetivo(std::string tip, float can, int tie): tipo(tip), cantidad(can), tiempo(tie){};
+  Objetivo(string tip, float can, int tie): tipo(tip), cantidad(can), tiempo(tie){};
 
-  std::string get_tipo();
+  string get_tipo();
   float get_cantidad();
   int get_tiempo();
 
 
-  void set_tipo(std::string );
+  void set_tipo(string );
   void set_cantidad(float );
   void set_tiempo(int );
 
@@ -34,12 +37,11 @@ public:
 
 };
 
-
-std::string Objetivo::get_tipo(){
+string Objetivo::get_tipo(){
   return tipo;
 }
 
-void Objetivo::set_tipo(std::string tip){
+void Objetivo::set_tipo(string tip){
   tipo = tip;
 }
 
@@ -64,3 +66,5 @@ float Objetivo::kilosalmes(){
   meta = cantidad / tiempo;
   return meta;
 }
+
+#endif

@@ -1,7 +1,7 @@
 /*
 * Erik Cabrera González
 * A01334318
-* Proyecto Nutricion
+* Proyecto Nutrición
 * Programar la clase Objetivo que:
 * Atributos: tipo, cantidad, tiempo
 * Métodos: constructor, getters(), setters(), kilosalmes()

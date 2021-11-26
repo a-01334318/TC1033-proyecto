@@ -23,7 +23,7 @@ protected:
   float carbs;
 
 public:
-  Dieta();
+  Dieta(): tipo(""), calorias(0), proteinas(0), lipidos(0), carbs(0){};
   Dieta(string tip, float cal, float pro, float lip, float car): tipo(tip), calorias(cal), proteinas(pro), lipidos(lip), carbs(car){};
 
   string get_tipo();

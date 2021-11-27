@@ -18,7 +18,7 @@ using namespace std;
 
 int main(){
 
-/* A implementar en próxima entrega
+/* A implementar en entrega final
 *  cout << "Menu:\n";
 *  cout << "1. Crea paciente. \n";
 *  cout << "2. Mostrar pacientes. \n";
@@ -70,7 +70,7 @@ int main(){
 
        paciente_2.set_colesterol(187.5);
        cout << paciente_2.get_colesterol() << endl;
-       
+
 // Ejemplo 2 Herencia
   Colitis paciente_3("Erik", "m", 71.0, 1.80, 24, false, "SII", 100.0);
   cout << paciente_3.get_nombre() << " "
@@ -80,8 +80,13 @@ int main(){
        << paciente_3.get_edad() << " "
        << paciente_3.get_tratamiento() << " "
        << paciente_3.get_subtipo() << " "
-       << paciente_3.get_hierro() <<endl;
+       << paciente_3.get_hierro() << endl;
+
+// Ejemplo Composición
+  Paciente paciente_4("Arieh", "m", 62.0, 1.78, 19);
+  cout << paciente_4.toString() << endl;
+  paciente_4.creaEjemploDieta();
+  cout << paciente_4.dietas[0].toString() << endl;
 
   return 0;
-
 }

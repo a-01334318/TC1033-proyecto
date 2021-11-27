@@ -39,6 +39,7 @@ public:
   void set_carbs(float );
 
   float calxcomida(int );
+  string toString()const;
 
 };
 
@@ -87,6 +88,12 @@ float Dieta::calxcomida(int veces){
   float comidas;
   comidas = calorias / veces;
   return comidas;
+}
+
+string Dieta::toString()const{
+  stringstream aux;
+  aux << "Tipo:" << tipo << " Calorías:" << calorias << " Proteínas:" << proteinas << " Lípidos:" << lipidos << " Carbohidratos:" << carbs << "\n";
+  return aux.str();
 }
 
 #endif

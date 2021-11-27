@@ -12,6 +12,7 @@
 
 #include <string>
 #include <iostream>
+#include <sstream>
 #include "objetivo.h"
 #include "dieta.h"
 
@@ -25,10 +26,11 @@ protected:
   float peso;
   float estatura;
   int edad;
-  Dieta dietas[MAX];
-  Objetivo objetivos[MAX];
 
 public:
+  Dieta dietas[MAX];
+  Objetivo objetivos[MAX];
+  
   Paciente(): nombre(""), sexo(""), peso(0), estatura(0), edad(0){};
   Paciente(string nom, string se, float pe, float es, int ed): nombre(nom), sexo(se), peso(pe), estatura(es), edad(ed){};
 
@@ -48,6 +50,8 @@ public:
 
   void creaEjemploDieta();
   void creaEjemploObjetivo();
+  void agregaDieta(string, float, float, float, float);
+  string toString()const;
 
 };
 
@@ -97,12 +101,23 @@ float Paciente::imc(){
   return imc;
 }
 
+// Composición
 void Paciente::creaEjemploDieta(){
   dietas[0] = Dieta("Ayuno", 1800, 40, 10, 50);
 }
 
 void Paciente::creaEjemploObjetivo(){
   objetivos[0] = Objetivo("Bajar", 3, 2);
+}
+
+void Paciente::agregaDieta(string tip, float cal, float pro, float lip, float car){
+  dietas[1] = Dieta(tip, cal, pro, lip, car);
+}
+
+string Paciente::toString()const{
+  stringstream aux;
+  aux << "Nombre:" << nombre << " Sexo:" << sexo << " Peso:" << peso << " Estatura:" << estatura << " Edad:" << edad << "\n";
+  return aux.str();
 }
 
 // Herencia Hipertension

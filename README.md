@@ -22,4 +22,4 @@ Correr en windows: "a.exe"
 No recibí retroalimentación para la entrega 3 a pesar de sí haber entregado. 
 Se actualizó el UML y se añadieron comentarios a todos los archivos. 
 Se corrigió estilo. 
-Algunos atributos de la clase Directorio y Paciente se mantuvieron públicas para ser modificadas mientras corre main().
+Algunos atributos de la clase Directorio y Paciente se declaraon como públicos para ser modificadas mientras corre main().

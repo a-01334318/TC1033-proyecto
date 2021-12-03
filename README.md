@@ -18,8 +18,7 @@ Correr en linux o mac: "/a.out"
 
 Correr en windows: "a.exe"
 
-# Correcciones
-No recibí retroalimentación para la entrega 3 a pesar de sí haber entregado. 
+# Correcciones 
 Se actualizó el UML y se añadieron comentarios a todos los archivos. 
 Se corrigió estilo. 
 Algunos atributos de la clase Directorio y Paciente se declaraon como públicos para ser modificadas mientras corre main().

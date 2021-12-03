@@ -203,7 +203,7 @@ int main(){
         cin >> nu;
         directorio.pacientes[nu].creaEjemploObjetivo();
         cout << "Los objetivos del paciente son: \n" << directorio.pacientes[nu].objetivos[0].toString();
-        cout << "Para alcanzar objetivo bajar/subir: " << directorio.pacientes[nu].objetivos[0].kilosalmes() << " kilos al mes. \n";
+        cout << "Para alcanzar objetivo subir/bajar: " << directorio.pacientes[nu].objetivos[0].kilosalmes() << " kilos al mes. \n";
       break;
     }
   }

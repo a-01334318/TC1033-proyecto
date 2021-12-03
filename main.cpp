@@ -188,7 +188,7 @@ int main(){
       case 9:
         int pac;
         directorio.muestraPacientes();
-        cout<< "Selecciona el número de paciente. ";
+        cout<< "Selecciona el número de paciente: ";
         cin >> pac;
         directorio.pacientes[pac].creaEjemploDieta();
         cout << "La dieta del paciente es: \n" << directorio.pacientes[pac].dietas[0].toString();
@@ -199,7 +199,7 @@ int main(){
       case 10:
         int nu;
         directorio.muestraPacientes();
-        cout<< "Selecciona el número de paciente. ";
+        cout<< "Selecciona el número de paciente: ";
         cin >> nu;
         directorio.pacientes[nu].creaEjemploObjetivo();
         cout << "Los objetivos del paciente son: \n" << directorio.pacientes[nu].objetivos[0].toString();
